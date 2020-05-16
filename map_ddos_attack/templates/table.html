@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+   <body>
+      <h1>Таблица по популярности login</h1>
+      <table border = 1>
+         <thead>
+            <td>count</td>
+            <td>login</td>
+         </thead>
+         
+         {% for row in rowsLogin %}
+            <tr>
+               <td>{{row["count(login)"]}}</td>
+               <td>{{row["login"]}}</td>
+            </tr>
+         {% endfor %}
+      </table>
+
+      <h1>Таблица по популярности стран</h1>
+      <table border = 1>
+         <thead>
+            <td>count</td>
+            <td>Страна</td>
+         </thead>
+         
+         {% for row in rowsCountry %}
+            <tr>
+               <td>{{row["count(country)"]}}</td>
+               <td>{{row["country"]}}</td>
+            </tr>
+         {% endfor %}
+      </table>
+
+      <h1>Таблица по популярности IP</h1>
+      <table border = 1>
+         <thead>
+            <td>count</td>
+            <td>IP</td>
+         </thead>
+         
+         {% for row in rowsIp %}
+            <tr>
+               <td>{{row["count(ip_addres)"]}}</td>
+               <td>{{row["ip_addres"]}}</td>
+            </tr>
+         {% endfor %}
+      </table>
+
+   </body>
+</html>
