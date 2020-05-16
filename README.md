@@ -5,11 +5,13 @@
 sudo apt install sqlite3
 ### 2) Надо создать таблицу
 sqlite3 db.sqlite 
-<p>и в sqlite3 вводим: create virtual table bad_users using fts4 (ip_addres, country, lat, lon, login, tokenize=simple);</p>
-### 3) Запуск скрипта
+и в sqlite3 вводим: create virtual table bad_users using fts4 (ip_addres, country, lat, lon, login, tokenize=simple);
+
+### 3) Запуск скрипта и сайта
 <ol>
-  <li>Надо сделать файли исполняемым: chmod +x путь script-ddos-search.sh</li>
+  <li>Надо сделать файли исполняемым: chmod +x путь/script-ddos-search.sh</li>
   <li>Запуск: ./путь/script-ddos-search.sh</li>
+  <li>Теперь надо запустить файл main.py из папки map_ddos_attack: python путь/map_ddos_attack/main.py</li>
 </ol>
 ### 4) Чтобы запускать скрипт автоматически надо:
 <ol>
