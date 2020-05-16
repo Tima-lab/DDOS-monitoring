@@ -12,7 +12,7 @@ sqlite3 db.sqlite
   <li>Надо сделать файли исполняемым: chmod +x путь/script-ddos-search.sh</li>
   <li>Запуск: ./путь/script-ddos-search.sh</li>
   <li>Теперь надо запустить файл main.py из папки map_ddos_attack: python путь/map_ddos_attack/main.py</li>
-</ol>
+<\ol>
 ### 4) Чтобы запускать скрипт автоматически надо:
 <ol>
   <li></li>
