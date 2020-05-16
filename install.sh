@@ -17,7 +17,7 @@ fi
 pip install flask
 sqlite3 db.ddos "create virtual table bad_users using fts4 (ip_address, country, lat, lon, login, tokenize=simple)"
 
-echo "* * * * * $PWD/install.sh" | crontab
+echo "* * * * * $PWD/script-ddos-search.sh" | crontab
 
 cat > /etc/systemd/system/python.service <<EOF
 [Unit]
