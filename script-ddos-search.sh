@@ -32,3 +32,4 @@ done < uniq_text
 
 rm temp
 
+python map_ddos_attack/main.py
