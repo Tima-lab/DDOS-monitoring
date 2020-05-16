@@ -24,7 +24,7 @@ while read login ssh nday mon day time year a b c d e f zero ip ; do
 	lon=$(cat temp | grep lon | awk '{ print $2 }')
 	echo "ip = $ip, country = $country, lat = $lat, lon = $lon, login = $login"
 	sqlite3 db.sqlite <<EOF 
-INSERT INTO bad_users (ip_addres, country, lat, lon, login) VALUES ("$ip", "$country", "$lat", "$lon", "$login");
+INSERT INTO bad_users (ip_address, country, lat, lon, login) VALUES ("$ip", "$country", "$lat", "$lon", "$login");
 EOF
 done < uniq_text
 
