@@ -1,11 +1,32 @@
 import sqlite3 as sql
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return render_template("map.html")
+    lat = 56.7414181
+    lon = 37.22414466976791
+    if request.args.get('lat'):
+        lat = float(request.args.get('lat'))
+    if request.args.get('lon'):
+        lon = float(request.args.get('lon'))
+
+    con = sql.connect("../db.sqlite")
+    con.row_factory = sql.Row
+
+    cur = con.cursor()
+    cur.execute("select lat, lon from bad_users")
+
+    coordinate = cur.fetchall()
+    cur.close()
+    length_list = len(coordinate)
+    print(length_list)
+
+    for i in range(length_list):
+        print(coordinate[i][0])
+
+    return render_template('index.html', lat = lat, lon = lon, coordinate = coordinate, length_list = length_list)
 
 @app.route('/rest/getCountryStatistics')
 def statistics():
