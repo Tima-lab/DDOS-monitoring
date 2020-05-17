@@ -16,7 +16,7 @@ def index():
     con.row_factory = sql.Row
 
     cur = con.cursor()
-    cur.execute("select count(ip_addres), lat, lon from bad_users group by ip_addres")
+    cur.execute("select count(ip_address), lat, lon from bad_users group by ip_address")
 
     coordinate = cur.fetchall()
     cur.close()
@@ -46,7 +46,7 @@ def statistics():
     cur.close()
 
     cur = con.cursor()
-    cur.execute("select count(ip_address), ip_addres from bad_users group by ip_address order by count(ip_address) DESC")
+    cur.execute("select count(ip_address), ip_address from bad_users group by ip_address order by count(ip_address) DESC")
 
     rowsIp = cur.fetchall()
     cur.close()
