@@ -14,4 +14,4 @@
 <img src="https://sun9-62.userapi.com/c857024/v857024861/136e5e/yZ468saY74w.jpg">
 <img src="https://sun9-8.userapi.com/c857024/v857024861/136e68/qeDW4ruSFsA.jpg">
 <img src="https://sun9-63.userapi.com/c857024/v857024861/136e72/5s5JPDsMELE.jpg">
-<img src="https://sun9-40.userapi.com/c854424/v854424447/23b661/f7iSP0HVjJc.jpg">
+<img src="https://sun9-25.userapi.com/c858424/v858424447/1e61f6/VzErQP8pELI.jpg">
