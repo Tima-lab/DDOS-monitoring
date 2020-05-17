@@ -1,7 +1,7 @@
 ﻿<html>
 
 <head>
-  <title>Map</title>      
+  <title>Карта</title>      
   <script src="http://www.openlayers.org/api/OpenLayers.js"></script>
   <script src="https://cdn.rawgit.com/kikocorreoso/map2wiki/master/src/static/brython_dist.js"></script>
   <style>
@@ -24,42 +24,56 @@ html, body {
 <body onload="brython(1)">
    <div id="mapdiv"></div>
 
-<script type="text/python">
+<script type="text/javascript">
 
-from javascript import JSObject, JSConstructor
-from browser import document, window, alert
+    var epsg4326 = new OpenLayers.Projection("EPSG:4326");
+    var map = new OpenLayers.Map('mapdiv');
+    
 
+    var osmLayer = new OpenLayers.Layer.OSM("OSM");
+    map.addLayer(osmLayer);
+    var center = new OpenLayers.LonLat(37.41, 8.82).transform(epsg4326,map.getProjectionObject());
+    map.setCenter(center,2); 
 
-ol = window.OpenLayers;
-layer = JSConstructor(ol.Layer.OSM)();
-map = JSConstructor(ol.Map)("mapdiv");
-map.addLayer(layer);
+    var points = [];
+    {% for row in coordinate %}
+	var g;
+	var r = 255;
+	if ({{ row["count(ip_addres)"] }} <= 255 )
+            g = 255 - {{ row["count(ip_addres)"] }};
+	else if ({{ row["count(ip_addres)"] }} <= 510) { 
+	    g = 0; 
+	    r -= {{ row["count(ip_addres)"] }} - 255;
+	} else {
+	    g = 0;
+	    r = 0;
+	}
 
-# defolt marker
+        points.push(new OpenLayers.Geometry.Point({{ lon }}, {{ lat }}));
+        points.push(new OpenLayers.Geometry.Point({{ row["lon"] }}, {{ row["lat"] }}));
 
-proj4326 = JSConstructor(ol.Projection)("EPSG:4326");
-lat_lon = JSConstructor(ol.LonLat)({{ lon }},{{ lat }}).transform(proj4326, map.getProjectionObject());
-map.setCenter(lat_lon, 2);
-markers = JSConstructor(ol.Layer.Markers)("Markers");
-map.addLayer(markers);
-marker = JSConstructor(ol.Marker)(lat_lon);
-markers.addMarker(marker);
+        var myLine = new OpenLayers.Geometry.LineString(points).transform(epsg4326, map.getProjectionObject());
+        var myLineStyle = {strokeColor:"rgb("+ r +","+ g +",0)", strokeWidth:2};
+        var myFeature = new OpenLayers.Feature.Vector(myLine, {}, myLineStyle);
+        var myVector = new OpenLayers.Layer.Vector("line test");
+        myVector.addFeatures([myFeature]);
+        map.addLayers([myVector]);
 
-{% for row in coordinate %}
-proj4326 = JSConstructor(ol.Projection)("EPSG:4326");
-lat_lon = JSConstructor(ol.LonLat)({{ row["lon"] }},{{ row["lat"] }}).transform(proj4326, map.getProjectionObject());
-map.setCenter(lat_lon, 2);
-markers = JSConstructor(ol.Layer.Markers)("Markers");
-map.addLayer(markers);
-marker = JSConstructor(ol.Marker)(lat_lon);
-markers.addMarker(marker);
-{% endfor %}
+	var lat_lon = new OpenLayers.LonLat({{ row["lon"] }},{{ row["lat"] }}).transform(new OpenLayers.Projection("EPSG:4326"), map.getProjectionObject());
 
+	var markers = new OpenLayers.Layer.Markers("Markers");
+	map.addLayer(markers);
+	markers.addMarker(new OpenLayers.Marker(lat_lon));
+	map.setCenter(lat_lon, 2);
 
+        points.pop();
+        points.pop();
+    {% endfor %}
 
+	
 
- </script>
+</script>
 
- </body>
+</body>
 
 </html>

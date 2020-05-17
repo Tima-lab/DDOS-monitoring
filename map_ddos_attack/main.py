@@ -16,7 +16,7 @@ def index():
     con.row_factory = sql.Row
 
     cur = con.cursor()
-    cur.execute("select lat, lon from bad_users")
+    cur.execute("select count(ip_addres), lat, lon from bad_users group by ip_addres")
 
     coordinate = cur.fetchall()
     cur.close()
@@ -26,7 +26,7 @@ def index():
     for i in range(length_list):
         print(coordinate[i][0])
 
-    return render_template('index.html', lat = lat, lon = lon, coordinate = coordinate, length_list = length_list)
+    return render_template('map.html', lat = lat, lon = lon, coordinate = coordinate, length_list = length_list)
 
 @app.route('/rest/getCountryStatistics')
 def statistics():
