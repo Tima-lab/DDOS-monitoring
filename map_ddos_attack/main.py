@@ -46,7 +46,7 @@ def statistics():
     cur.close()
 
     cur = con.cursor()
-    cur.execute("select count(ip_addres), ip_addres from bad_users group by ip_addres order by count(ip_addres) DESC")
+    cur.execute("select count(ip_address), ip_addres from bad_users group by ip_address order by count(ip_address) DESC")
 
     rowsIp = cur.fetchall()
     cur.close()
