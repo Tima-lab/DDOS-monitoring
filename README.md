@@ -11,6 +11,6 @@
 
 ### Скиншоты работы
 <img src="https://sun9-23.userapi.com/c857032/v857032779/19595c/YMSrA3W6pi4.jpg">
-<img src="https://sun9-34.userapi.com/c857136/v857136205/195b22/sA6Gx7pLzqc.jpg">
-<img src="https://sun9-28.userapi.com/c857136/v857136205/195b40/IoHo1y6sXQ0.jpg">
-<img src="https://sun9-54.userapi.com/c857136/v857136205/195b36/oZB36aFnvCA.jpg">
+<img src="https://sun9-4.userapi.com/c857524/v857524861/1f9425/8pGNiRsPKAc.jpg">
+<img src="https://sun9-20.userapi.com/c857524/v857524861/1f942f/8kPo6wNit-I.jpg">
+<img src="https://sun9-20.userapi.com/c857524/v857524861/1f942f/8kPo6wNit-I.jpg">
