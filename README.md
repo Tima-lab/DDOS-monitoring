@@ -8,4 +8,6 @@
 
 ##### Файл ddos_search1.sh сделан для того, чтобы загрузить в бд информацию с файла history_ssh.out
 
-https://sun9-23.userapi.com/c857032/v857032779/19595c/YMSrA3W6pi4.jpg
+
+### Скиншоты работы
+<img src="https://sun9-23.userapi.com/c857032/v857032779/19595c/YMSrA3W6pi4.jpg">
