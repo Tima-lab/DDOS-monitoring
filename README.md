@@ -10,7 +10,7 @@
 
 
 ### Скиншоты работы
-<img src="https://sun9-23.userapi.com/c857032/v857032779/19595c/YMSrA3W6pi4.jpg">
-<img src="https://sun9-4.userapi.com/c857524/v857524861/1f9425/8pGNiRsPKAc.jpg">
-<img src="https://sun9-20.userapi.com/c857524/v857524861/1f942f/8kPo6wNit-I.jpg">
-<img src="https://sun9-16.userapi.com/c857524/v857524861/1f9439/mnsw7_INCFk.jpg">
+<img src="https://sun9-40.userapi.com/c857024/v857024861/136e54/6-WYP42X6es.jpg">
+<img src="https://sun9-62.userapi.com/c857024/v857024861/136e5e/yZ468saY74w.jpg">
+<img src="https://sun9-8.userapi.com/c857024/v857024861/136e68/qeDW4ruSFsA.jpg">
+<img src="https://sun9-63.userapi.com/c857024/v857024861/136e72/5s5JPDsMELE.jpg">
