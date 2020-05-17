@@ -39,11 +39,11 @@ html, body {
     {% for row in coordinate %}
 	var g;
 	var r = 255;
-	if ({{ row["count(ip_addres)"] }} <= 255 )
-            g = 255 - {{ row["count(ip_addres)"] }};
-	else if ({{ row["count(ip_addres)"] }} <= 510) { 
+	if ({{ row["count(ip_address)"] }} <= 255 )
+            g = 255 - {{ row["count(ip_address)"] }};
+	else if ({{ row["count(ip_address)"] }} <= 510) { 
 	    g = 0; 
-	    r -= {{ row["count(ip_addres)"] }} - 255;
+	    r -= {{ row["count(ip_address)"] }} - 255;
 	} else {
 	    g = 0;
 	    r = 0;
