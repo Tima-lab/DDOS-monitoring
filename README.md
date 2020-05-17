@@ -10,8 +10,8 @@
 
 
 ### Скиншоты работы
-<img src="https://sun9-40.userapi.com/c857024/v857024861/136e54/6-WYP42X6es.jpg">
+##### Цвет линий меняется от желтого до красного, если количество атак от одного ip-ареса меньше 255. От красного до черного, если количество атак от одного ip-адреса больше 255 и меньше 510. Дальше цвет не будет менятся.
+<img src="https://sun9-56.userapi.com/c857232/v857232014/198b28/RkP-ezacx6U.jpg">
 <img src="https://sun9-62.userapi.com/c857024/v857024861/136e5e/yZ468saY74w.jpg">
 <img src="https://sun9-8.userapi.com/c857024/v857024861/136e68/qeDW4ruSFsA.jpg">
 <img src="https://sun9-63.userapi.com/c857024/v857024861/136e72/5s5JPDsMELE.jpg">
-<img src="https://sun9-25.userapi.com/c858424/v858424447/1e61f6/VzErQP8pELI.jpg">
